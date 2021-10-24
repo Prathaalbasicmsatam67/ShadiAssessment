@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50pt"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/userPic"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:background="#8E4242"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_launcher_background"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:text="TextView"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgReject"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#0000ffff"
+
+            android:scaleType="centerInside"
+            android:src="@drawable/reject"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/userPic"
+            app:layout_constraintTop_toBottomOf="@+id/userPic"
+            card_view:layout_constraintStart_toStartOf="@+id/guideline" />
+
+        <ImageButton
+            android:id="@+id/imgAccept"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#0000ffff"
+
+            android:scaleType="centerInside"
+            android:visibility="invisible"
+
+            app:layout_constraintBottom_toBottomOf="@+id/userPic"
+            app:layout_constraintEnd_toEndOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/userPic"
+            app:srcCompat="@drawable/accept" />
+
+        <TextView
+            android:id="@+id/ageNheight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            card_view:layout_constraintEnd_toEndOf="@+id/name"
+            card_view:layout_constraintHorizontal_bias="0.02"
+            card_view:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/profession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            card_view:layout_constraintEnd_toEndOf="@+id/name"
+            card_view:layout_constraintHorizontal_bias="0.03"
+            card_view:layout_constraintTop_toBottomOf="@+id/ageNheight" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            card_view:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_end="20dp" />
+
+        <TextView
+            android:id="@+id/txtUserStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="User Request Accepted"
+            android:textColor="@color/rejectedUserColor"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="#808080"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/userPic"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/userPic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
